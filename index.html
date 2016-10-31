@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DaWanda Signup form</title>
+
+		<link rel = "stylesheet" type = "text/css" href = "node_modules/font-awesome/css/font-awesome.min.css" />
+		<link rel = "stylesheet" type = "text/css" href = "app/styles/main.css" />
+	</head>
+	<body>
+		<div class = "main-wrapper">
+			<div class = "main-wrapper__holder">
+				<div class = "main-wrapper__holder__header">
+					<div class = "button-holder">
+						<i class = "fa fa-facebook addon addon--left addon--white"></i>
+						<button id = "btn_fb-reg" class = "button button--facebook">Uber Facebook registrieren</button>
+					</div>
+					<span class = "alter-msg">Oder ohne Facebook</span>
+				</div>
+				<form id = "signup-form" name = "signup_form" class = "signup-form" novalidate method = "POST">
+					<div class = "signup-form__body">
+						<div class = "form-group">
+							<label class = "form-group__label">Vorname</label>
+							<div class = "input-group">
+								<i class = "fa fa-user"></i>
+								<input type = "text" id = "f_name" name = "first_name" required />
+							</div>
+							<span class = "message message--warning">muss ausgefullt werden</span>
+						</div>
+						<div class = "form-group">
+							<label class = "form-group__label">Nachname</label>
+							<div class = "input-group">
+								<i class = "fa fa-user"></i>
+								<input type = "text" id = "l_name" name = "last_name" required />
+							</div>
+							<span class = "message message--warning">muss ausgefullt werden</span>
+						</div>
+						<div class = "form-group">
+							<label class = "form-group__label">Mitgleidsname</label>
+							<div class = "input-group">
+								<i class = "fa fa-user"></i>
+								<input type = "text" id = "m_name" name = "middle_name" 
+									placeholder = "Dein Mitgleidsname ist offentlich" required />
+							</div>
+							<span class = "message message--warning">muss ausgefullt werden</span>
+						</div>
+						<div class = "form-group">
+							<label class = "form-group__label">E-mail</label>
+							<div class = "input-group">
+								<i class = "fa fa-envelope"></i>
+								<input type = "email" id = "email" name = "email" required />
+							</div>
+							<span class = "message message--warning">muss ausgefullt werden</span>
+						</div>
+						<div class = "form-group">
+							<label class = "form-group__label">Passwort</label>
+							<div class = "input-group">
+								<i class = "fa fa-lock strength-indicator"></i>
+								<input type = "password" id = "password" name = "password" required />
+								<div class = "cb-holder">
+									<input type = "checkbox" id = "cb_psw-show-hide" for = "password" value = "0"/>
+									Anzeigen
+								</div>
+							</div>
+							<span class = "message message--warning">muss ausgefullt werden</span>
+						</div>
+						<div class = "form-group">
+							<div class = "form-group--row">
+								<input type = "checkbox" id = "cb_terms-services" name = "terms" />
+								<label class = "form-group__label">
+									Ich willige in die Verareitung und Nutzung meiner Daten gemass der 
+									<a class = "inline-link" href = "">Datenschutzerklarung</a> ein.
+								</label>
+							</div>
+							<span class = "message message--warning">muss ausgefullt werden</span>
+						</div>
+						<div class = "form-group">
+							<input type = "submit" id = "btn_submit" class = "button button--submit" 
+								value = "Jetzt registrieren" />
+						</div>
+					</div>
+				</form>
+				<div class = "main-wrapper__holder__footer">
+					<span>Bereits Mitglied bei DaWanda? <a class = "inline-link" href = "">Hier einloggen</a></span>
+				</div>
+			</div>
+		</div>
+
+		<script type = "text/javascript" src = "node_modules/jquery/dist/jquery.min.js"></script>
+		<script type = "text/javascript" src = "app/scripts/main.js"></script>
+	</body>
+</html>

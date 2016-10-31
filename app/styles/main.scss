@@ -1,0 +1,306 @@
+$fb-color: #325b9a;
+$submit-color: #729c0b;
+$white-color: #FFFFFF;
+$grey-color: #ededed;
+$dark-grey-color: #bbb8b8;
+$black-color: #000000;
+$light-blue-color: #1b6384;
+$warning-background: #fbe0a7;
+$warning-text: #ff980b;
+$danger-color: #c62828;
+$yellow-color: #FFA000;
+
+
+html, body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;	
+	height: 100%;
+}
+
+.main-wrapper {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	margin: 20px 10px;
+	background-color: $grey-color;
+
+	&__holder {
+		    display: flex;
+		    flex-flow: column wrap;
+		    align-items: center;
+		    width: 500px;
+		    height: auto;
+		    margin-top: 20px;
+		
+		&__header {
+			display: flex;
+			flex-flow: column wrap;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+
+		&__body {
+			display: flex;
+			flex-flow: column wrap;
+			width: 100%;
+		}
+
+		&__footer {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-flow: column wrap;
+			width: 80%;
+			margin-top: 40px;
+			border-top: 1px solid $dark-grey-color;
+			padding: 20px;
+
+		}
+	}
+}
+
+.button-holder {
+	display: flex;
+	position: relative;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.button {
+	display: flex;
+	width: 100%;
+	border: none;
+	outline: none;
+	padding: 20px;
+	justify-content: center;
+	box-shadow: 0px 2px 3px $black-color;
+	border-radius: 3px;
+	cursor: pointer;
+
+	&--facebook {
+		background-color: $fb-color;
+		color: $white-color;
+	}
+
+	&--submit {
+		background-color: $submit-color;
+		color: $white-color;
+	}
+}
+
+.addon {
+	position: relative;
+
+	&--left {
+		left: 30px;
+	}
+
+	&--right {
+		right: 30px;
+	}
+
+	&--white {
+		color: $white-color;
+	}
+}
+
+.alter-msg {
+	display: inline-flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0px;
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 12px;
+
+	&:before {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 25%;
+		height: 2px;
+		left: 20px;
+		background-color: $dark-grey-color;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 25%;
+		height: 2px;
+		right: 20px;
+		background-color: $dark-grey-color;
+	}
+}
+
+.signup-form {
+	display: flex;
+	background-color: $white-color;
+	border-radius: 3px;
+
+	&__body {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+
+		&:last-child {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.form-group {
+	display: flex;
+	flex-flow: column wrap;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+
+	&__label {
+		text-transform: uppercase;
+		font-size: 14px;
+		align-self: flex-start;
+	}
+
+	& span.message {
+		align-self: flex-start;
+	}
+
+	&--row {
+		display: flex;
+		flex-flow: row;
+		padding: 10px;
+
+		& label {
+			text-transform: none;
+		}
+
+		& input[type = "checkbox"] {
+			width: 30px;
+		}
+	}
+}
+
+.input-group {
+	width: 100%;
+	position: relative;
+	display: flex;
+	padding: 10px;
+	justify-content: center;
+	align-items: center;
+
+	& input {
+		width: 100%;
+		padding: 10px;
+		
+		border: 1px solid $grey-color;
+		outline: none;
+	}
+
+	& input[type = "password"] {
+		padding: 10px 130px 10px 10px;
+	}
+
+	& i {
+		display: flex;
+		width: 10%;
+		justify-content: center;
+		padding: 11px;
+		background-color: $grey-color;
+	}
+}
+
+.cb-holder {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $grey-color;
+	padding: 10px;
+	width: 100px;
+	right: 10px;
+}
+
+.inline-link {
+	text-decoration: none;
+	color: $light-blue-color;
+}
+
+.message {
+	display: none;
+	position: relative;
+	padding: 5px 10px;
+	margin: 0px 0px 10px 15px;
+
+	&:before {
+		content: "";
+		position: absolute;
+		width: 0; 
+		height: 0; 
+		top: -5px;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-bottom: 5px solid $warning-background;
+
+	}
+
+	&--warning {
+		background-color: $warning-background;
+		color: $warning-text;
+	}
+}
+
+.strength-indicator {
+	position: relative;
+
+	&--low {
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 33%;
+			bottom: 0;
+			z-index: 1;
+			background-color: $danger-color;
+		}
+	}
+
+	&--medium {
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 66%;
+			bottom: 0;
+			z-index: 1;
+			background-color: $yellow-color;
+		}
+	}
+
+	&--high {
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			bottom: 0;
+			z-index: 1;
+			background-color: $submit-color;
+		}
+	}
+
+}
+
+.fa {
+
+	&:before {
+		z-index: 2;		
+	}
+}
